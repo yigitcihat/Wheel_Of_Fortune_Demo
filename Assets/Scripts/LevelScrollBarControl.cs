@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelScrollBarControl : MonoBehaviour
 {
+    [SerializeField]
+    private int slideCount;
     HorizontalLayoutGroup layoutGroup;
     private void Start()
     {
@@ -13,13 +15,13 @@ public class LevelScrollBarControl : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventManager.OnLevelIncrease.AddListener(() => MoveSlider(-150));
-        EventManager.OnLevelDecrease.AddListener(() => MoveSlider(150));
+        EventManager.OnLevelIncrease.AddListener(() => MoveSlider(-slideCount));
+        EventManager.OnLevelDecrease.AddListener(() => MoveSlider(slideCount));
     }
     private void OnDisable()
     {
-        EventManager.OnLevelIncrease.RemoveListener(() => MoveSlider(-150));
-        EventManager.OnLevelDecrease.RemoveListener(() => MoveSlider(150));
+        EventManager.OnLevelIncrease.RemoveListener(() => MoveSlider(-slideCount));
+        EventManager.OnLevelDecrease.RemoveListener(() => MoveSlider(slideCount));
     }
 
     void MoveSlider(int value)

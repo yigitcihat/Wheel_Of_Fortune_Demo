@@ -30,7 +30,7 @@ public class Level_Bar_Content_Generation : MonoBehaviour
     {
         content.gameObject.name += _level_content.name + "_" + level;
         content.GetComponentInChildren<TextMeshProUGUI>().text = level.ToString();
-        if (level%5 == 0)
+        if (level == 1 || level%5 == 0 )
         {
             content.GetComponentInChildren<Image>().color = new Color32(114, 255, 83, 255);
         }

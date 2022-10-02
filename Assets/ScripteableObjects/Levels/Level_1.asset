@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d2150ed16009f42b7f2a7de4f9d708, type: 3}
+  m_Name: Level_1
+  m_EditorClassIdentifier: 
+  levelIndex: 1
+  Slot_1_Images: []
+  Slot_1_Names: []
+  Slot_1_Rates: 
+  Slot_1_Colors:
+  - serializedVersion: 2
+    rgba: 0
