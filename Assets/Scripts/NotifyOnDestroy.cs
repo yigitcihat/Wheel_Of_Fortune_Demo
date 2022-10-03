@@ -9,6 +9,6 @@ public class NotifyOnDestroy : MonoBehaviour
 
     public void OnDestroy()
     {
-        Destroyed?.Invoke(AssetReference, this);
+        //Destroyed?.Invoke(AssetReference, this);
     }
 }

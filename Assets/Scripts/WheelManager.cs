@@ -37,9 +37,50 @@ public class WheelManager : MonoBehaviour
     {
         //Sets the parts of angles in list
         SetAngles();
+        //Places first rewards
         PlaceRewards();
     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            PlaceRewards();
+            return;
+        }
+        if (!_isStarted)
+            return;
 
+        float maxLerpRotationTime = 4f;
+
+        _currentLerpRotTime += Time.deltaTime;
+        if (_currentLerpRotTime > maxLerpRotationTime || Wheel.transform.eulerAngles.z == _finalAngle)
+        {
+            _currentLerpRotTime = maxLerpRotationTime;
+            _isStarted = false;
+            _startAngle = _finalAngle % 360;
+
+            GetReward();
+
+        }
+
+        float t = _currentLerpRotTime / maxLerpRotationTime;
+
+        // Speed up at start and speed down at the end of spining.
+        t = t * t * t * (t * (6f * t - 15f) + 10f);
+
+        float angle = Mathf.Lerp(_startAngle, _finalAngle, t);
+        Wheel.transform.eulerAngles = new Vector3(0, 0, angle);
+
+    }
+
+    private void GetReward()
+    {
+        float currentZPos = _startAngle;
+        int awardWon = Mathf.Abs(((int)currentZPos + 360) / (int)_anglePerItem) % 360;
+        Debug.Log("Pos z = " + currentZPos);
+        Debug.Log("YOu get = " + Wheel.transform.GetChild(awardWon).GetChild(0).name);
+        _isOneTime = false;
+    }
     void SetAngles()
     {
         _partsAngles = new List<float>();
@@ -108,6 +149,8 @@ public class WheelManager : MonoBehaviour
 
         _currentLevel++;
     }
+
+    //-----------------------------Adressable Methods --------------------------
     private void LoadAndSpawn(AssetReference assetReference, int slotNum)
     {
         var op = Addressables.LoadAssetAsync<GameObject>(assetReference);
@@ -152,6 +195,7 @@ public class WheelManager : MonoBehaviour
 
             };
     }
+    
     private void Remove(AssetReference assetReference, NotifyOnDestroy obj)
     {
         Addressables.ReleaseInstance(obj.gameObject);
@@ -167,98 +211,9 @@ public class WheelManager : MonoBehaviour
             Levels[_currentLevel].AsyncOperationHandles.Remove(assetReference);
         }
     }
- 
-    void Update()
-    {
-        // Make turn button non interactable if user has not enough money for the turn
-        //if (_isStarted || CurrentCoinsAmount < TurnCost)
-        //{
-        //TurnButton.interactable = false;
-        //TurnButton.GetComponent<Image>().color = new Color(255, 255, 255, 0.5f);
-        //}
-        //else
-        ////{
-        //    TurnButton.interactable = true;
-        //    TurnButton.GetComponent<Image>().color = new Color(255, 255, 255, 1);
-        //}
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            PlaceRewards();
-            return;
-        }
-        if (!_isStarted)
-            return;
-
-        float maxLerpRotationTime = 4f;
+    //-------------------------------------------------------
+    
 
 
-
-
-        // increment timer once per frame
-        _currentLerpRotTime += Time.deltaTime;
-        if (_currentLerpRotTime > maxLerpRotationTime || Wheel.transform.eulerAngles.z == _finalAngle)
-        {
-            _currentLerpRotTime = maxLerpRotationTime;
-            _isStarted = false;
-            _startAngle = _finalAngle % 360;
-
-            //GiveAwardByAngle();
-            //StartCoroutine(HideCoinsDelta());
-            GetReward();
-
-        }
-
-        // Calculate current position using linear interpolation
-        float t = _currentLerpRotTime / maxLerpRotationTime;
-
-        // This formulae allows to speed up at start and speed down at the end of rotation.
-        // Try to change this values to customize the speed
-        t = t * t * t * (t * (6f * t - 15f) + 10f);
-
-        float angle = Mathf.Lerp(_startAngle, _finalAngle, t);
-        Wheel.transform.eulerAngles = new Vector3(0, 0, angle);
-       
-    }
-
-    private void GetReward()
-    {
-        float currentZPos = _startAngle;
-        int awardWon = Mathf.Abs(((int)currentZPos+360) / (int)_anglePerItem) % 360 ;
-        Debug.Log("Pos z = " + currentZPos);
-        Debug.Log("YOu get = " +Wheel.transform.GetChild(awardWon).GetChild(0).name);
-        _isOneTime = false;
-    }
-
-
-    //private void RewardCoins(int awardCoins)
-    //{
-    //    CurrentCoinsAmount += awardCoins;
-    //    CoinsDeltaText.text = "+" + awardCoins;
-    //    CoinsDeltaText.gameObject.SetActive(true);
-    //    StartCoroutine(UpdateCoinsAmount());
-    //}
-
-    //private IEnumerator HideCoinsDelta()
-    //{
-    //    yield return new WaitForSeconds(1f);
-    //    CoinsDeltaText.gameObject.SetActive(false);
-    //}
-
-    //private IEnumerator UpdateCoinsAmount()
-    //{
-    //    // Animation for increasing and decreasing of coins amount
-    //    const float seconds = 0.5f;
-    //    float elapsedTime = 0;
-
-    //    while (elapsedTime < seconds)
-    //    {
-    //        CurrentCoinsText.text = Mathf.Floor(Mathf.Lerp(PreviousCoinsAmount, CurrentCoinsAmount, (elapsedTime / seconds))).ToString();
-    //        elapsedTime += Time.deltaTime;
-
-    //        yield return new WaitForEndOfFrame();
-    //    }
-
-    //    PreviousCoinsAmount = CurrentCoinsAmount;
-    //    CurrentCoinsText.text = CurrentCoinsAmount.ToString();
-    //}
+   
 }
