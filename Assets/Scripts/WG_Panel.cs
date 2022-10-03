@@ -24,7 +24,7 @@ public class WG_Panel : MonoBehaviour
 
     protected virtual void Awake()
     {
-        WG_PanelList.HCBPanels[PanelID] = this;
+        WG_PanelList.WG_Panels[PanelID] = this;
     }
     public virtual void ShowPanel()
     {
@@ -39,19 +39,4 @@ public class WG_Panel : MonoBehaviour
         CanvasGroup.interactable = false;
         CanvasGroup.blocksRaycasts = false;
     }
-}
-public static class WG_PanelList
-{
-    public static string MainMenuPanel = "MainMenuPanel";
-    public static string GamePanel = "GamePanel";
-
-    public static Dictionary<string, WG_Panel> HCBPanels = new Dictionary<string, WG_Panel>();
-
-    private static string[] panelIDs = new string[]
-    {
-            "None",
-            MainMenuPanel,
-            GamePanel,
-};
-    public static List<string> PanelIDs { get { return panelIDs.ToList(); } }
 }

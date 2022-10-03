@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 3c7e48f06080748498418c24cd93a37b
+  m_SerializeEntries:
+  - m_GUID: f2d30f2a0046d334cab7cae3b8a30b2c
+    m_Address: Aviator_Glasses_Easter.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2c39290ed4b6c7240824875b41efa25f
+    m_Address: Baseball_Cap_Easter.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3453e84ebb8540b489d5855c25f514c9
+    m_Address: Death.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 91fa8c1b3248a0b4f863c0a916d43f9c
+    m_Address: Gold.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7f7d40d27b91194478d061450eaa12e6
+    m_Address: Grenade_m26.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2b46b0515ac0b244aa3f15d9ddd53a43
+    m_Address: Grenade_m67.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c0b9bec606c41134a9badd9d9213915c
+    m_Address: Healthshot_2_neurostim.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7051edad1fd8cb44a9df2567c8c11c8d
+    m_Address: Healthshot_2_regenerator.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b41112935f5dd1c42a4cacf4b82c945f
+    m_Address: Helmet_Pumpkin.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b16986abe05ce5f4bbcee3739ec90f67
+    m_Address: Mle_bayonet_easter_time.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6be841e6cffd3244eaf27cc81f06a043
+    m_Address: Mle_bayonet_summer_vice.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9b7d673c8fd4df0469849c6ee80b8dc5
+    m_Address: Molotov.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f9a4e97650c0fea4ea041054b9a29a3d
+    m_Address: Tier1_shotgun.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5f8723bca8a29734888b7ea300421427
+    m_Address: Tier2_mle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b9439250e16faca4c9cec10315f1cc6d
+    m_Address: Tier2_rifle.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e603ebb1feec95c408016dc9419386ad
+    m_Address: Tier3_shotgun.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 56512be7423446e4e9abdf62a291963c
+    m_Address: Tier3_smg.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e5416a3dca46a834bbf205fc095d2a66
+    m_Address: Tier3_sniper.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 863e4500be5d46a409587c3366797fd3, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7002ad8d520fd8c42b675689af8e1524, type: 2}
+    - {fileID: 11400000, guid: 0cb6a893ed088614b81780ce6dcde965, type: 2}
