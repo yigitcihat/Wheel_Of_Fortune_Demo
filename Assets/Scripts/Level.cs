@@ -23,6 +23,6 @@ public class Level : ScriptableObject
 
     public int[] Slot_Rates = new int[8];
 
-
+    
 
 }

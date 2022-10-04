@@ -25,18 +25,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413584979838543609}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1413584980905617450}
-  m_RootOrder: 1
+  m_Father: {fileID: 1413584980531158376}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 30, y: 30}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1413584979838543588
 CanvasRenderer:
@@ -162,6 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1413584980531158376}
+  - component: {fileID: -1178180946431346233}
   m_Layer: 5
   m_Name: Healthshot_2_neurostim
   m_TagString: Untagged
@@ -181,6 +182,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1413584979838543610}
   - {fileID: 181877919341341664}
   - {fileID: 1413584980905617450}
   m_Father: {fileID: 0}
@@ -191,6 +193,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &-1178180946431346233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413584980531158383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64f8fd5fb726334dbd254adc58c87f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardContent: {fileID: 652732102662570186, guid: a27cbfbec401e7f4088a7e21805d3fd2, type: 3}
 --- !u!1 &1413584980709202132
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,10 +239,10 @@ RectTransform:
   m_Father: {fileID: 1413584980013242043}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.422, y: -4.4431}
-  m_SizeDelta: {x: 73.9753, y: 20.6667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000017166138, y: -0.3243}
+  m_SizeDelta: {x: 0, y: -9.081}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1413584980709202135
 CanvasRenderer:
@@ -288,7 +303,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 0
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
@@ -320,7 +335,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 21.525173, y: -9.343794, z: 12.861958, w: -0.14483547}
+  m_margin: {x: 0.119960785, y: 0.06157112, z: -0.111003876, w: -0.14483547}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -357,9 +372,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1413584980013242043}
-  - {fileID: 1413584979838543610}
   m_Father: {fileID: 1413584980531158376}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -428,6 +442,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139252854271321472, guid: d012adeec798b8744bdd604fd7ffc62d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4755ab2b049cb549b75057b3e50f82c, type: 3}
+    - target: {fileID: 9139252854271321472, guid: d012adeec798b8744bdd604fd7ffc62d, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
@@ -449,7 +467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9139252854271321474, guid: d012adeec798b8744bdd604fd7ffc62d, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139252854271321474, guid: d012adeec798b8744bdd604fd7ffc62d, type: 3}
       propertyPath: m_AnchorMax.x

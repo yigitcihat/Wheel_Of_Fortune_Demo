@@ -17,7 +17,7 @@ public class MainMenuPanel : WG_Panel
     void OpenGamePanel()
     {
         HidePanel();
-        EventManager.OnOpenGamePanel.Invoke();
+        EventManager.OnRestartGame.Invoke();
     }
 
 }

@@ -38,7 +38,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 91fa8c1b3248a0b4f863c0a916d43f9c
+  - m_AssetGUID: ab722658f8611e84385c9197800b43f6
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -46,4 +46,4 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  Slot_Rates: 0300000096000000000000000000000000000000000000000000000000000000
+  Slot_Rates: 030000000e000000010000000300000002000000030000006400000002000000

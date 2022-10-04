@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelIndex: 5
   SlotReferences:
-  - m_AssetGUID: 91fa8c1b3248a0b4f863c0a916d43f9c
+  - m_AssetGUID: ab722658f8611e84385c9197800b43f6
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  - m_AssetGUID: 91fa8c1b3248a0b4f863c0a916d43f9c
+  - m_AssetGUID: ab722658f8611e84385c9197800b43f6
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
@@ -46,4 +46,4 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  Slot_Rates: 0300000096000000000000000000000000000000000000000000000000000000
+  Slot_Rates: b6000000030000000400000003000000d2000000020000000500000015000000

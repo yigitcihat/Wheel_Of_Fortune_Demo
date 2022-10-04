@@ -9,24 +9,28 @@ public class LevelScrollBarControl : MonoBehaviour
     [SerializeField]
     private int slideCount;
     HorizontalLayoutGroup layoutGroup;
+
+    private int firstLeftPadding;
     private void Start()
     {
+      
         layoutGroup = GetComponent<HorizontalLayoutGroup>();
+        firstLeftPadding = layoutGroup.padding.left; ;
     }
     private void OnEnable()
     {
         EventManager.OnLevelIncrease.AddListener(() => MoveSlider(-slideCount));
-        EventManager.OnLevelDecrease.AddListener(() => MoveSlider(slideCount));
+        EventManager.OnRestartGame.AddListener(ResetSlider);
     }
     private void OnDisable()
     {
         EventManager.OnLevelIncrease.RemoveListener(() => MoveSlider(-slideCount));
-        EventManager.OnLevelDecrease.RemoveListener(() => MoveSlider(slideCount));
+        EventManager.OnRestartGame.RemoveListener(ResetSlider);
     }
 
     void MoveSlider(int value)
     {
-        Debug.Log("Increased");
+        //Debug.Log("Increased");
         int leftPadding = layoutGroup.padding.left;
 
         leftPadding += value;
@@ -35,6 +39,12 @@ public class LevelScrollBarControl : MonoBehaviour
             .OnUpdate(() => {
                 layoutGroup.SetLayoutHorizontal();
             });
+
+    }
+    void ResetSlider()
+    {
+        layoutGroup.padding.left = firstLeftPadding;
+        layoutGroup.SetLayoutHorizontal();
 
     }
 }

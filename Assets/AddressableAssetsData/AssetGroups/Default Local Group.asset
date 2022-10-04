@@ -89,6 +89,10 @@ MonoBehaviour:
     m_Address: Tier3_sniper.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ab722658f8611e84385c9197800b43f6
+    m_Address: Money.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 863e4500be5d46a409587c3366797fd3, type: 2}
   m_SchemaSet:
