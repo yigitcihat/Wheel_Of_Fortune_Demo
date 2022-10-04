@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class FailPanel : WG_Panel
 {
 
-    private Button startButton;
-    protected Button StartButton { get { return (startButton == null) ? startButton = GetComponentInChildren<Button>() : startButton; } }
+    private Button restartButton;
+    protected Button RestartButton { get { return (restartButton == null) ? restartButton = GetComponentInChildren<Button>() : restartButton; } }
 
     private void OnEnable()
     {
@@ -19,7 +16,7 @@ public class FailPanel : WG_Panel
     }
     private void OnValidate()
     {
-        StartButton.onClick.AddListener(RestartGame);
+        RestartButton.onClick.AddListener(RestartGame);
 
     }
 
@@ -27,6 +24,6 @@ public class FailPanel : WG_Panel
     {
         EventManager.OnRestartGame.Invoke();
         HidePanel();
-        
+
     }
 }

@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardContent: {fileID: 652732102662570186, guid: a27cbfbec401e7f4088a7e21805d3fd2, type: 3}
+  Count: 0
+  isBomb: 0
 --- !u!1 &6720900849489270809
 GameObject:
   m_ObjectHideFlags: 0
@@ -301,7 +303,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 40, y: 4}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6720900850276014587
 CanvasRenderer:

@@ -12,38 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d2150ed16009f42b7f2a7de4f9d708, type: 3}
   m_Name: Level_17
   m_EditorClassIdentifier: 
-  levelIndex: 1
+  levelIndex: 2
   SlotReferences:
-  - m_AssetGUID: 3453e84ebb8540b489d5855c25f514c9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 91fa8c1b3248a0b4f863c0a916d43f9c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 3453e84ebb8540b489d5855c25f514c9
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  - m_AssetGUID: 91fa8c1b3248a0b4f863c0a916d43f9c
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_EditorAssetChanged: 0
-  Slot_Rates: 0300000096000000000000000000000000000000000000000000000000000000
+  - {fileID: 7415035468809013384, guid: 91fa8c1b3248a0b4f863c0a916d43f9c, type: 3}
+  - {fileID: 1896119262810081077, guid: 7051edad1fd8cb44a9df2567c8c11c8d, type: 3}
+  - {fileID: 6159257073234932859, guid: 3453e84ebb8540b489d5855c25f514c9, type: 3}
+  - {fileID: 7415035468809013384, guid: ab722658f8611e84385c9197800b43f6, type: 3}
+  - {fileID: 548723656741092945, guid: 9b7d673c8fd4df0469849c6ee80b8dc5, type: 3}
+  - {fileID: 1413584980531158383, guid: c0b9bec606c41134a9badd9d9213915c, type: 3}
+  - {fileID: 6159257073234932859, guid: 3453e84ebb8540b489d5855c25f514c9, type: 3}
+  - {fileID: 1856601603468654945, guid: e603ebb1feec95c408016dc9419386ad, type: 3}
+  Slot_Rates: 0800000096000000000000005500000004000000030000000000000004000000

@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3998b1339ea406646ab8a72133a11554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelID: 
+  PanelID: FailPanel
   OnPanelShown:
     m_PersistentCalls:
       m_Calls: []
@@ -885,9 +885,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221999702}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &245994614
 GameObject:
@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 361937331}
   - component: {fileID: 361937333}
   - component: {fileID: 361937332}
+  - component: {fileID: 361937334}
   m_Layer: 5
   m_Name: ui_panel_wheelPanel
   m_TagString: Untagged
@@ -1555,6 +1556,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361937330}
   m_CullTransparentMesh: 1
+--- !u!114 &361937334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361937330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3771f334380526f4ea84d9fc34fa38b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BronzeSpin: {fileID: 21300000, guid: 45113992fb19cec419caccae235364a7, type: 3}
+  BronzeIndicator: {fileID: 21300000, guid: 8db843022e8b2724a93204cbc677445e, type: 3}
+  SilverSpin: {fileID: 21300000, guid: e466bd44730ed004e9e5832ac2270732, type: 3}
+  SilverIndicator: {fileID: 21300000, guid: 08958cf7a7f8b0442be1cb3aedb2fc49, type: 3}
+  GoldSpin: {fileID: 21300000, guid: 851cf0ecfbf8b844a87360a637ba4922, type: 3}
+  GoldIndicator: {fileID: 21300000, guid: 71c9d15de00f1f44ca715ab554a33910, type: 3}
 --- !u!1 &370749878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,7 +1607,7 @@ RectTransform:
   m_Children:
   - {fileID: 245994615}
   m_Father: {fileID: 1705092974}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1638,7 +1657,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 370749881}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 221999706}
+        m_TargetAssemblyTypeName: WG_Panel, Assembly-CSharp
+        m_MethodName: HidePanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &370749881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2857,7 +2888,7 @@ RectTransform:
   m_Children:
   - {fileID: 670344113}
   m_Father: {fileID: 1705092974}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4594,8 +4625,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 370749879}
   - {fileID: 730047619}
+  - {fileID: 370749879}
   m_Father: {fileID: 221999703}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4618,9 +4649,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 0
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -5274,9 +5305,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966050652}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!1 &1995040875
 GameObject:
@@ -5555,6 +5586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c9546cfb4a9ba488d1c47c48634a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentLevel: 0
   TurnButton: {fileID: 875756290}
   Wheel: {fileID: 1707195467}
   GainedRewardsHolder: {fileID: 670344118}
@@ -5575,21 +5607,21 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 715a38ec1c26aa04f9255277f78d5911, type: 2}
   - {fileID: 11400000, guid: 2275bcbf0491812419f6193295fa7f72, type: 2}
   - {fileID: 11400000, guid: a37de032024e86e4f872771c2f26712f, type: 2}
-  - {fileID: 11400000, guid: 356cee8712bfa9845b32477f17198054, type: 2}
-  - {fileID: 11400000, guid: 97674765a11aa734b8208bb92362db19, type: 2}
-  - {fileID: 11400000, guid: 98c45461c28443f48aa3c85860a396c7, type: 2}
-  - {fileID: 11400000, guid: 262b7ee92e3be764e9023642bab68aea, type: 2}
-  - {fileID: 11400000, guid: 963e8fafe19411e4ba92af73244f8cbb, type: 2}
-  - {fileID: 11400000, guid: 5586d4f16e686a141b944b464d2f3e55, type: 2}
-  - {fileID: 11400000, guid: c01d46d88ba812447a162eda1cade5ed, type: 2}
-  - {fileID: 11400000, guid: e87c78212a01b914e89357704d7d5a66, type: 2}
-  - {fileID: 11400000, guid: c52c2fc56b8d68141a02539984cab3e5, type: 2}
-  - {fileID: 11400000, guid: 32bbb9b602c250d4cb52dbc3e81617ec, type: 2}
-  - {fileID: 11400000, guid: 10478597abd552e44b41934c0f43bd36, type: 2}
-  - {fileID: 11400000, guid: 011dda487827a634ea7c5b952f7b43a8, type: 2}
-  - {fileID: 11400000, guid: 601ee77b6fdd27041955b11e0409e2e5, type: 2}
-  - {fileID: 11400000, guid: 5765c860aeb9573478b20cce04606e4b, type: 2}
-  - {fileID: 11400000, guid: aa769d51a2cc1c249bef1ddf537e6cd0, type: 2}
+  - {fileID: 11400000, guid: 4bd94de256eac5546a4a946b04d1e5a4, type: 2}
+  - {fileID: 11400000, guid: a031d246ac68bb349bc0f0ddc91a6e7e, type: 2}
+  - {fileID: 11400000, guid: 3db1bb8a083592d47bee80988874696d, type: 2}
+  - {fileID: 11400000, guid: cc5788ddfc5c920499cea89bbb7bb10e, type: 2}
+  - {fileID: 11400000, guid: 4e1a9977e11257948b9969bcab12b869, type: 2}
+  - {fileID: 11400000, guid: b2e7125c4ada6c74dbcfd8fa207dceb3, type: 2}
+  - {fileID: 11400000, guid: 72bdfe8d1f622af4994b4731e6cebaae, type: 2}
+  - {fileID: 11400000, guid: 38e76c0c4288c604d8cb0248bb8f814c, type: 2}
+  - {fileID: 11400000, guid: 0b4920e8f144bee429a6845f6faa267b, type: 2}
+  - {fileID: 11400000, guid: 27c579d24c0627748816dfaea70c7c91, type: 2}
+  - {fileID: 11400000, guid: 07ea133fd0b7746428ca4b869e44293a, type: 2}
+  - {fileID: 11400000, guid: b079a6d44fffed146870c080f5fe42a9, type: 2}
+  - {fileID: 11400000, guid: 95d3a4bf55d54864b86498012e432cc6, type: 2}
+  - {fileID: 11400000, guid: d17aee8937d32c540b03da470418a352, type: 2}
+  - {fileID: 11400000, guid: f315dd6713750714cab7bab7ec94e6f3, type: 2}
   _wheelPartsCount: 8
 --- !u!4 &2090055991
 Transform:
