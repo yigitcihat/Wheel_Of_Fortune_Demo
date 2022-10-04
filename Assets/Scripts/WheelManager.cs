@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 using System.Linq;
 using TMPro;
 using DG.Tweening;
@@ -54,6 +52,7 @@ public class WheelManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        TurnButton.onClick.AddListener(TurnWheel);
         EventManager.OnRestartGame.AddListener(RestartGame);
     }
     private void OnDisable()
@@ -61,10 +60,6 @@ public class WheelManager : MonoBehaviour
         EventManager.OnRestartGame.RemoveListener(RestartGame);
     }
 
-    private void OnValidate()
-    {
-        TurnButton.onClick.AddListener(TurnWheel);
-    }
 
     void Update()
     {

@@ -8,16 +8,12 @@ public class FailPanel : WG_Panel
 
     private void OnEnable()
     {
+        RestartButton.onClick.AddListener(RestartGame);
         EventManager.OnOpenFailPanel.AddListener(ShowPanel);
     }
     private void OnDisable()
     {
         EventManager.OnOpenFailPanel.RemoveListener(ShowPanel);
-    }
-    private void OnValidate()
-    {
-        RestartButton.onClick.AddListener(RestartGame);
-
     }
 
     void RestartGame()

@@ -10,6 +10,7 @@ public class GamePanel : WG_Panel
     private void OnEnable()
     {
         EventManager.OnOpenGamePanel.AddListener(ShowPanel);
+        CloseButton.onClick.AddListener(CloseGamePanel);
     }
     private void OnDisable()
     {
@@ -19,13 +20,9 @@ public class GamePanel : WG_Panel
     {
         CloseButton.transform.parent = CloseButton.transform.parent.parent;
         CloseButton.transform.SetAsLastSibling();
+      
     }
 
-    
-    private void OnValidate()
-    {
-        CloseButton.onClick.AddListener(CloseGamePanel);
-    }
 
     void CloseGamePanel()
     {

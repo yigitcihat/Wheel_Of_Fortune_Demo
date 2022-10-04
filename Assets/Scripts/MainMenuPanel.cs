@@ -10,7 +10,7 @@ public class MainMenuPanel : WG_Panel
 
     private void OnEnable()
     {
-
+        StartButton.onClick.AddListener(OpenGamePanel);
         EventManager.OnCloseGamePanel.AddListener(ShowPanel);
     }
     private void OnDisable()
@@ -18,10 +18,6 @@ public class MainMenuPanel : WG_Panel
         EventManager.OnCloseGamePanel.RemoveListener(ShowPanel);
     }
 
-    private void OnValidate()
-    {
-        StartButton.onClick.AddListener(OpenGamePanel);
-    }
 
     void OpenGamePanel()
     {
